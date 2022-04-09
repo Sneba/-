@@ -1,0 +1,13 @@
+#include "layer.h"
+#include "dark_cuda.h"
+#include <stdlib.h>
+
+void free_sublayer(layer *l)
+{
+    if (l) {
+        free_layer(*l);
+        free(l);
+    }
+}
+
+void free_layer(layer l)
